@@ -1,18 +1,5 @@
 { config, pkgs, ... }:
 
-let
-  enzuru-emacs = (pkgs.emacsPackagesFor pkgs.emacs-git).emacsWithPackages (epkgs: with pkgs; [
-    clang-tools
-    elixir-ls
-    fish-lsp
-    gopls
-    pyright
-    rust-analyzer
-    solargraph
-    typescript-language-server
-  ]);
-in
-
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -31,7 +18,15 @@ in
   home.packages = with pkgs; [
     claude-code
     claude-code-acp
-    enzuru-emacs
+    emacs-git
+    clang-tools
+    elixir-ls
+    fish-lsp
+    gopls
+    pyright
+    rust-analyzer
+    solargraph
+    typescript-language-server
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
