@@ -16,8 +16,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    claude-agent-acp
     claude-code
-    claude-code-acp
     emacs-git
     clang-tools
     elixir-ls
